@@ -6,4 +6,5 @@ import com.codewithmosh.store.entities.Seller;
 
 public interface SellerRepository extends JpaRepository<Seller, Long> {
 
+	public Seller findByEmail(String email);
 }

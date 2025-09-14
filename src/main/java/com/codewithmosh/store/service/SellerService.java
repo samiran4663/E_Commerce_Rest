@@ -2,6 +2,7 @@ package com.codewithmosh.store.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -31,6 +32,7 @@ public class SellerService
 	
 	public SellerDto addSeller(Seller seller)
 	{
+		seller.setPassword(new BCryptPasswordEncoder(12).encode(seller.getPassword()));
 		sellerrepo.save(seller);
 		return SellerDto.builder()
 				.id(seller.getId())

@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -45,6 +46,7 @@ public class UserService {
     private PurchaseRepository purchaserepo;
 
     public UserResponseDto addUser(User user) {
+    	user.setPassword(new BCryptPasswordEncoder(12).encode(user.getPassword()));
     	userrepo.save(user);
     	return UserResponseDto.builder()
     			.id(user.getId())
