@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: store
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/store_api?createDatabaseIfNotExist=true
+    username: root
+    password: samiran752004
+  jpa:
+    show-sql: true
