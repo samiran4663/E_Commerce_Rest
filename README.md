@@ -92,7 +92,8 @@ The E-Commerce REST API is a backend application built with Spring Boot that pro
 - DELETE /api/sellers/{sellerId}/products/{productId} → Remove product
 
 🗄 Database Schema
-  This project uses Flyway for database versioning and migrations.
+  
+This project uses Flyway for database versioning and migrations.
 - The script.sql file provides the initial schema for setting up the database.
 - Additional changes and enhancements are managed through Flyway migration scripts (V1__init.sql, V2__add_profiles.sql, V3__update_products.sql, V4__add_sellers.sql, V5__purchase_flow.sql, etc.).
   
