@@ -80,10 +80,12 @@ The E-Commerce REST API is a backend application built with Spring Boot that pro
 - Use Postman or cURL to test endpoints.
 
 🔗 API Endpoints (Sample)
+
 👤 User Endpoints
 - POST /api/auth/register/user → Register new user
 - POST /api/auth/login → User login
 - POST /api/users/{userId}/orders → Place order
+
 🛒 Seller Endpoints
 - POST /api/sellers/{sellerId}/products → Add new product
 - PUT /api/sellers/{sellerId}/products/{productId}/stock → Update Stock 
