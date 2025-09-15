@@ -1,4 +1,5 @@
 E-Commerce REST API
+
 📌 Introduction
 
 The E-Commerce REST API is a backend application built with Spring Boot that provides endpoints for managing users, products, sellers, purchases, and authentication in an online shopping system. This project demonstrates best practices in API design, layered architecture, DTO mapping, and secure authentication — making it production-ready for real-world e-commerce platforms.
